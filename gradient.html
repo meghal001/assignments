@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+			div
+			{
+				float: left;
+			}
+			.container
+			{
+				width: 100%; height:30px;
+			}
+			.demo
+			{
+				position: relative;
+				width: 30px;
+				left: 200px;
+				padding: 20px;
+				border-radius: 10px;
+			}
+			.marginBuffer
+			{
+				width: 10px;
+			}
+			.linearGradient
+			{
+				background: -webkit-linear-gradient(180deg, green, red);
+			}
+			.radialGradientCircle
+			{
+				background: -webkit-radial-gradient(top,circle,red,yellow,orange,green);
+			}
+			.radialGradientEllipse
+			{
+				background: -webkit-radial-gradient(top,ellipse,red,yellow,orange,green);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<div class="demo linearGradient">BOX</div>
+		<div class="marginBuffer"></div>
+		<div class="demo radialGradientCircle">BOX</div>
+		<div class="marginBuffer"></div>
+		<div class="demo radialGradientEllipse">BOX</div>
+		</div>
+	</body>
+</html>
+
