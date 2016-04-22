@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<p> Current time is</p>
+		<p id="demo"></p>
+		<script>
+			function secondFunction(i)
+			{
+				if(i<10)
+					i="0"+i;
+				return i;
+			}
+			function getTime()
+			{
+				var d=new Date();
+				var h=d.getHours();
+				var m=d.getMinutes();
+				m=secondFunction(m);
+				var time=h+" : "+m;
+				return time;
+			}
+			document.getElementById("demo").innerHTML=getTime();
+		</script>
+	</body>
+</html>
