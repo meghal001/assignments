@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script>
+			function mouse_position(event)
+			{				
+				var posx=event.clientX;
+				var posy=event.clientY;
+				var currentDate=new Date();
+				document.getElementById("myInput").value='X: '+ posx+'; Y: '+posy+'; Time: '+currentDate;
+			}
+			document.onmousemove=mouse_position;
+		</script>
+	</head>
+	<body>
+		<form>
+			<input id="myInput" type="text" style="width: 500px"/>
+		</form>
+	</body>
+</html>

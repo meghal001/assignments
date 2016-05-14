@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<style>
+		table, th, td{
+				margin: auto;
+				border: 1px solid black;
+				}
+			</style>
+	</head>
+	<script>
+		function hideOddRows()
+		{
+			var ref=document.getElementById("myTable").rows;
+			var len=ref.length;
+			var i;
+			for(i=0;i<len;i++)
+			{
+				if(i%2==0)
+					ref[i].style.display="none";
+			}
+		}
+	</script>
+	<body>
+		<table id="myTable">
+			<tr>
+				<td>Row 1</td>
+			</tr>
+			<tr>
+				<td>Row 2</td>
+			</tr>
+			<tr>
+				<td>Row 3</td>
+			</tr>
+			<tr>
+				<td>Row 4</td>
+			</tr>
+			<tr>
+				<td>Row 5</td>
+			</tr>
+		</table>
+		<div style="text-align: center">
+		<button id="myButton" style="position: relative; top:20px" onclick="hideOddRows()">Hide Odd Rows!</button>
+		</div>
+	</body>
+</html>
+
