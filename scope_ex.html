@@ -1,0 +1,37 @@
+<html>
+	<body>
+		<script>
+			function example(num1, num2)
+			{
+				this.num1=num1;
+				this.num2=num2;
+				this.sum=function()
+				{
+					var sum=this.num1+this.num2;//private variable that stores the result
+					alert("Sum of the numbers is : " + sum) ;
+				};
+				this.diff=function()
+				{
+					var diff=this.num1-this.num2;//private variable that stores the result
+					alert("Difference of the numbers is : " + diff) ;
+				};
+				this.prod=function()
+				{
+					var prod=this.num1*this.num2;//private variable that stores the result
+					alert("Product of the numbers is : " + prod) ;
+				};
+				this.div=function()
+				{
+					var div=this.num1/this.num2;//private variable that stores the result
+					alert("Division of the numbers is : " + div) ;
+				};
+			}
+			var ex=new example(20,10);
+			ex.sum();
+			ex.diff();
+			ex.prod();
+			ex.div();
+		</script>
+		<p> This is an example of scope of variables in javascript</p>
+	</body>
+</html>

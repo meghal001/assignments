@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<div id="demo"></div>
+		<script>
+			function Person(fname, lname, email, phone)
+			{
+					this.fname=fname;
+					this.lname=lname;
+					this.email=email;
+					this.phone=phone;
+			}
+			var a=new Person("John","Doe","johndoe@abc.com",987654321);
+			document.getElementById("demo").innerHTML=a.fname+" "+a.lname+" has email id "+a.email+" and phone number "+a.phone;
+		</script>
+	</body>
+</html>

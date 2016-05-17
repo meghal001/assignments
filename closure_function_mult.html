@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			function outerFunc(var1)
+			{
+				var prod=function(var2)
+				{
+					var prod1=var1 * var2;
+					return prod1;
+				}
+				return prod;
+			}
+			var ans=outerFunc(10);
+			alert("The multiplication of the numbers is : " +ans(2));
+		</script>
+	</body>
+</html>
+
+			
