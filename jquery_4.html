@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			var ref=$("#acadgild");
+			var html="<a href='www.google.com' id='google'>Google!!!</a>";
+			var html1="<a href='www.acadgild.com' id='acadgild'>Jquery Tutorial</a>";
+			var text=ref.text();
+			console.log(text);
+			if(text=="Jquery Tutorial")
+				$("button").on('click', function(){ref.html(html)});
+			else if(text=="Google!!!")
+				$("button").on('click', function(){ref.html(html1)});
+			});
+		</script>
+	</head>
+	<body>
+		<button>Change Link!</button><br>
+		<a href="www.acadgild.com" id="acadgild">Jquery Tutorial</a>
+	</body>
+</html>

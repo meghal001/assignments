@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var ref=$("li");
+				var i;
+				var html;
+				for(i=0;i<ref.length;i++)
+				{
+					html="<b>"+(i+1)+": </b>";
+					ref.eq(i).prepend(html);
+				}
+			});
+		</script>
+	</head>	
+	<body>
+		<ul>
+		<li>Html Tutorial</li>
+		<li>Mongodb Tutorial</li>
+		<li>Python Tutorial</li>
+		</ul>
+	</body>
+</html>
