@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#field1").blur(function(){
+					alert("Blur event occured for field1");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form>
+			<input id="field1" type="text" value=" Field 1"><br>
+			<input id="field2" type="text" value=" Field 2">
+		</form>
+	</body>
+</html>
