@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<script>
+			function Person(){};
+			function Student(){};
+			Person.prototype.name="Meghal";
+			Person.prototype.getName=function()
+			{
+				alert(this.name);
+			};
+			Student.prototype.name=Person.prototype.name;
+			Student.prototype.getName=Person.prototype.getName;
+			Student.prototype.setName=function(name){this.name=name;}
+			var stud=new Student();
+			stud.getName();
+			stud.setName("Annu");
+			stud.getName();
+		</script>
+	</body>
+</html>
+
+			
+			

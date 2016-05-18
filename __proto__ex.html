@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+			function Animal(name)
+			{
+				this.name=name;
+			};
+			function Rabbit()
+			{
+			};
+			var a=new Animal("rabbit");
+			Rabbit.__proto__=a;
+			console.log(Rabbit.__proto__.name);
+			Rabbit.__proto__.name="Rabbit1";
+			console.log(Rabbit.__proto__.name);
+		</script>
+	</body>
+</html>
+
+			
+			
