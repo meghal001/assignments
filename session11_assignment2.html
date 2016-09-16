@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<script src="angular.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			var myMod = angular.module('myMod', []);
+			myMod.controller('myCtrl1', function($scope){
+				$scope.click = function(){
+					alert("Employee "+$scope.name+" with employee id "+$scope.empId+" is a "+$scope.desig+" in our company.");
+				}
+			})
+		</script>
+	</head>
+	<body ng-app="myMod">
+		<div ng-controller="myCtrl1">
+			Name: <input ng-model="name" type="text"/></br></br>
+			Employee ID: <input ng-model="empId" type="text"/></br></br>
+			Designation: <input ng-model="desig" type="text"/></br></br>
+			<button ng-click="click()">Show Values</button>
+		</div>
+	</body>
+</html>

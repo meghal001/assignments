@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="angular.js"></script>
+		<script>
+			var myApp=angular.module("myApp",[]);
+			myApp.service("displayService", function(){
+				this.name="Meghal";
+				this.age=24;
+				this.empid=734905;
+				this.salary=50000;
+			});
+			myApp.controller("myCtrl", function($scope, displayService){
+				$scope.name=displayService.name;
+				$scope.age=displayService.age;
+				$scope.empid=displayService.empid;
+				$scope.salary=displayService.salary;
+			});
+		</script>
+		<style>
+			table, tr, td{
+				border: 1px solid black;
+			}
+			th{
+				fontweight: bold;
+			}
+		</style>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>Age</td>
+					<td>Employee ID</td>
+					<td>Salary</td>
+				</tr>
+				<tr>
+					<td>{{name}}</td>
+					<td>{{age}}</td>
+					<td>{{empid}}</td>
+					<td>{{salary}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

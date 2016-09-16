@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="angular.js"></script>
+		<script src="angular-route.js"></script>
+		<script>
+			var myApp=angular.module('myApp',['ngRoute']);
+			myApp.config(['$routeProvider', 
+			function($routeProvider){
+				$routeProvider.
+					when('/route1', {
+						templateUrl : 'template1.html',
+						controller: 'routeController1'
+						})
+					.when('/route2', {
+						templateUrl : 'template1.html',
+						controller: 'routeController2'
+						})
+					.when('/route3', {
+						templateUrl : 'template1.html',
+						controller: 'routeController3'
+						})
+					.when('/route4', {
+						templateUrl : 'template1.html',
+						controller: 'routeController4'
+						});
+			}]);
+			myApp.controller('routeController1', function($scope){
+				$scope.message="Welcome to the site home page";
+			});
+			myApp.controller('routeController2', function($scope){
+				$scope.message="Welcome to the site second page";
+			});
+			myApp.controller('routeController3', function($scope){
+				$scope.message="Welcome to the site third page";
+			});
+			myApp.controller('routeController4', function($scope){
+				$scope.message="Welcome to the site forth page";
+			});
+		</script>
+	</head>
+	<body ng-app="myApp">
+		<a href="#/route1">Welcome</a></br>
+		<a href="#/route2">2nd Page</a></br>
+		<a href="#/route3">3rd Page</a></br>
+		<a href="#/route4">4th Page</a></br>
+		<div ng-view></div>
+	</body>
+</html>
+		
