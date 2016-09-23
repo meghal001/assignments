@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="angular.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+		var app=angular.module("myApp", []);
+		app.controller("myCtrl", function($scope){
+			$scope.input1="Meghal";
+		});
+		app.directive("hello", function(){
+			return{
+				restrict:'E',
+				scope: true,
+				template: "<div><input type='text' ng-model='input1'>"+
+							"<div>{{input1}}</div></div>",
+				replace: true
+			};
+		});
+		</script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<hello></hello>
+		</div>
+	</body>
+</html>
+
+		

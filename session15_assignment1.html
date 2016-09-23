@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script>
+			myApp=angular.module("myApp", []);
+			myApp.controller("myCtrl", ['$scope', function($scope){
+				$scope.Pane1={
+					name: "Amit",
+					address: "10, Somewhere1"
+				};
+				$scope.Pane2={
+					name: "Sumit",
+					address: "20, Somewhere2"
+				};
+			}]);
+			myApp.directive('myPane', function(){
+				return{
+					restrict: 'E',
+					scope: {
+						paneInfo: "=info"
+					},
+					template: "Name:{{paneInfo.name}} Address:{{paneInfo.address}}"
+				};
+			});
+		</script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<my-pane info="Pane1"></my-pane>
+			<hr>
+			<my-pane info="Pane2"></my-pane>
+		</div>
+	</body>
+</html>

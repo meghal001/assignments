@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="angular.js">
+		</script>
+		<script>
+			var myApp=angular.module("myApp", []);
+			myApp.controller("myCtrl", function($scope){
+				$scope.array=[
+					{name:"Meghal", designation:"SE", age:"24"},
+					{name:"Arpita", designation:"ITA", age:"25"}
+				];
+			});
+		</script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<table>
+				<tr>
+					<th> Name </th>
+					<th> Designation </th>
+					<th> Age </th>
+				</tr>
+				<tr ng-repeat="arr in array | orderBy: 'designation'">
+					<td>{{arr.name}}</td>
+					<td>{{arr.designation}}</td>
+					<td>{{arr.age}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
+
+		
+		

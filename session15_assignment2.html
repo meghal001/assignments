@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script>
+			myApp=angular.module("myApp", []);
+			myApp.controller("myCtrl", ['$scope', function($scope){
+				$scope.div1={
+					id: "1",
+					salary: "10000"
+				};
+				$scope.div2={
+					id: "2",
+					salary: "20000"
+				};
+			}]);
+			myApp.directive('myDiv', function(){
+				return{
+					restrict: 'E',
+					scope: {
+						divInfo: "=info"
+					},
+					template: "Id:{{divInfo.id}} salary:{{divInfo.salary}}"
+				};
+			});
+		</script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<my-div info="div1"></my-div>
+			<hr>
+			<my-div info="div2"></my-div>
+		</div>
+	</body>
+</html>

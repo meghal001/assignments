@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="angular.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			var myModule=angular.module("myModule", []);
+			myModule.controller("myCtrl", function($scope){
+				$scope.name="meghal";
+				$scope.education="b.tech";
+				$scope.address="jamshedpur";
+			});
+		</script>
+	</head>
+	<body ng-app="myModule">
+		<div ng-controller="myCtrl">
+			Name: <span id="name">{{name | uppercase}}</span><br>
+			Education: <span id="education">{{education | uppercase}}</span><br>
+			Address: <span id="address">{{address | uppercase}}</span><br>
+		</div>
+	</body>
+</html>

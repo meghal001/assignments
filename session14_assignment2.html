@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="angular.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			var myApp=angular.module("myApp", []);
+			myApp.controller("myCtrl", function($scope){});
+			myApp.directive("customDirective1", function()
+			{
+				return{
+					restrict: "E",
+					template: "<div style='background-color: grey'>This is custom directive used as element.</div>",
+					replace: true
+				};
+			});
+			myApp.directive("customDirective2", function()
+			{
+				return{
+					restrict: "A",
+					template: "<div style='border: 1px solid black'>This is custom directive used as attribute.</div>",
+					replace: true
+				};
+			});
+			myApp.directive("customDirective3", function()
+			{
+				return{
+					restrict: "C",
+					template: "<div style='font-family: calibri; font-size:18'>This is custom directive used as class.</div>",
+					replace: true
+				};
+			});
+		</script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<custom-directive1></custom-directive1>
+			<div id="custom2" custom-directive2></div>
+			<div id="custom2" class="custom-directive3"></div>
+		</div>
+	</body>
+</html>
