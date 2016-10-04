@@ -1,0 +1,45 @@
+{ "products": 
+    [
+    {
+    	"productName":"John", 
+    	"productDescription":"Doe", 
+    	"image":"images/1.png", 
+    	"price": 1000,
+        "id":1
+    },
+    {
+    	"productName":"John", 
+    	"productDescription":"Doe", 
+    	"image":"images/2.png", 
+    	"price": 2000,
+        "id":2
+    },
+    {
+    	"productName":"John", 
+    	"productDescription":"Doe", 
+    	"image":"images/3.png", 
+    	"price": 3000,
+        "id":3
+    },
+    {
+    	"productName":"John", 
+    	"productDescription":"Doe", 
+    	"image":"images/4.png", 
+    	"price": 4000,
+        "id":4
+    },
+    {
+    	"productName":"John", 
+    	"productDescription":"Doe", 
+    	"image":"images/5.png", 
+    	"price": 5000,
+        "id":5
+    },
+    {
+    	"productName":"John", 
+    	"productDescription":"Doe", 
+    	"image":"images/6.png", 
+    	"price": 6000,
+        "id":6
+    }
+]}

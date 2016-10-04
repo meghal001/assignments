@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="angular.js"></script>
+		<script>
+			var factoryApp=angular.module("factoryApp", []);
+			factoryApp.factory("empFactory", function(){
+				var literalObject={
+					returnName: function(){
+						return "Meghal";
+						},
+					returnNumber: function(){
+						return 734905;
+						},
+					returnSalary: function(){
+						return 30000;
+						}
+				};
+				return literalObject;
+			});
+			factoryApp.controller("myCtrl", function($scope, empFactory){
+				$scope.name=empFactory.returnName();
+				$scope.number=empFactory.returnNumber();
+				$scope.salary=empFactory.returnSalary();
+			});
+		</script>
+		<style>
+			table, th, td, tr{border: 1px solid black};
+		</style>
+	</head>
+	<body ng-app="factoryApp">
+		<div ng-controller="myCtrl">
+			<table>
+				<tr>
+					<th>Emp Name</th>
+					<th>Emp No.</th>
+					<th>Salary</th>
+				</tr>
+				<tr>
+					<td>{{name}}</td>
+					<td>{{number}}</td>
+					<td>{{salary}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

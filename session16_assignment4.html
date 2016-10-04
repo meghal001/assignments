@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="angular.js"></script>
+		<script>
+			var serviceApp=angular.module("serviceApp", []);
+			serviceApp.service("empService", function(){
+				this.returnName=function(){
+						return "Meghal";
+						};
+				this.returnNumber=function(){
+						return 734905;
+						};
+				this.returnSalary=function(){
+						return 30000;
+						};
+			});
+			serviceApp.controller("myCtrl", function($scope, empService){
+				$scope.name=empService.returnName();
+				$scope.number=empService.returnNumber();
+				$scope.salary=empService.returnSalary();
+			});
+		</script>
+		<style>
+			table, th, td, tr{border: 1px solid black};
+		</style>
+	</head>
+	<body ng-app="serviceApp">
+		<div ng-controller="myCtrl">
+			<table>
+				<tr>
+					<th>Emp Name</th>
+					<th>Emp No.</th>
+					<th>Salary</th>
+				</tr>
+				<tr>
+					<td>{{name}}</td>
+					<td>{{number}}</td>
+					<td>{{salary}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
